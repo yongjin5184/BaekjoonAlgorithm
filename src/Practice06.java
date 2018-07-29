@@ -23,7 +23,6 @@ public class Practice06 {
             direction += Integer.parseInt(curNext[2]);
         }
 
-
         int resultDirection = 0;
 
         if(direction % 2 == 1){
