@@ -70,8 +70,6 @@ class Nation implements Comparable<Nation>{
             }else if(this.silver == nation.silver){
                 if(this.bronze > nation.bronze){
                     return -1;
-                }else if(this.bronze == nation.bronze){
-                    return 0;
                 }
             }
         }
