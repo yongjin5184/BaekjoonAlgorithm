@@ -30,13 +30,11 @@ public class Practice15 {
             }
         }
 
-        for(int i = 0; i < lineMaxLen; i++){
-            for(int j = 0; j < 5; j++){
-                if(tmp[j][i] != null)
+        for(int i = 0; i < lineMaxLen; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (tmp[j][i] != null)
                     System.out.print(tmp[j][i]);
             }
         }
-
-
     }
 }
