@@ -27,5 +27,3 @@ public class Practice5585 {
         System.out.println(index);
     }
 }
-
-}
