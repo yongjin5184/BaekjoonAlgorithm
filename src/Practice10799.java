@@ -4,7 +4,7 @@ import java.util.Stack;
 /**
  * Created by yong on 2018. 8. 14..
  */
-public class Practice16 {
+public class Practice10799 {
     public static void main(String[] args){
 
         /*
