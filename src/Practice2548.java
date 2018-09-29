@@ -13,7 +13,7 @@ public class Practice2548 {
          * description : 백준 2548번 대표 자연수
          * solution : 1. 입력 받은 배열을 정렬한다.
          *            2. 첫 번째 for문으로 base 원소를 정한 뒤,
-         *            3. 두 번째 for문을 돌리면서 base - 각 원소를 뺀 값의 합이 최소인 걸 return
+         *            3. 두 번째 for문을 돌리면서 (base - 각 원소)를 뺀 값의 합이 최소인 것을 return
          */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
