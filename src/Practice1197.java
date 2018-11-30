@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by yong on 2018. 11. 29..
  */
-public class Test1197 {
+public class Practice1197 {
     public static void main(String[] args) throws IOException{
         /**
          * description : 백준 1197 최소스패닝/신장트리(MST)

@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * Created by yong on 2018. 11. 29..
  */
-public class Test1920 {
+public class Practice1920 {
     public static void main(String[] args) throws IOException{
         /**
          * description : 백준 1920 수찾기
