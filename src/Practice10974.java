@@ -17,29 +17,29 @@ public class Practice10974 {
          */
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        int[] arr = new int[N];
+
         output = new int[N];
         boolean[] visited = new boolean[N];
         for (int i = 0; i < N; i++) {
             visited[i] = true;
-            DFS(arr, visited, N, i, 0);
+            DFS(visited, N, i, 0);
             visited[i] = false;
         }
     }
 
-    public static void DFS(int[] arr, boolean[] visited, int N, int start, int depth) {
+    public static void DFS(boolean[] visited, int N, int start, int depth) {
         output[depth] = start + 1;
         if (depth == N - 1) {
             for (int i = 0; i < N; i++)
                 System.out.print(output[i] + " ");
-            System.out.println();
+            System.out.println("");
             return;
         }
         for (int i = 0; i < N; i++) {
             if (visited[i])
                 continue;
             visited[i] = true;
-            DFS(arr, visited, N, i, depth + 1);
+            DFS(visited, N, i, depth + 1);
             visited[i] = false;
         }
     }
