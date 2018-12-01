@@ -1,5 +1,4 @@
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
@@ -17,7 +16,7 @@ public class Practice1149 {
          *            4. 따라서 이 값들(dp[i][0], dp[i][1], dp[i][2])을 N까지 모두 구해주고
          *            5. N번째의 가장 작은 값을 출력해준다.
          */
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("test.txt")));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         int arr[][] = new int[N + 1][3];
         int dp[][] = new int[N + 1][3];
