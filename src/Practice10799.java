@@ -13,7 +13,6 @@ public class Practice10799 {
         *  출력 : 잘려진 조각의 총 개수를 나타내는 정수를 한 줄에 출력한다.
         * */
 
-
         Scanner scan = new Scanner(System.in);
         String line = scan.nextLine();
         char[] charLine = line.toCharArray();
