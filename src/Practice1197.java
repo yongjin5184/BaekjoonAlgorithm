@@ -14,7 +14,7 @@ public class Practice1197 {
         /**
          * description : 백준 1197 최소스패닝/신장트리(MST)
          * solution : 1. 크루스칼 알고리즘 이용
-         *               2. Union - Find 알고리즘 이용
+         *            2. Union - Find 알고리즘 이용
          */
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
