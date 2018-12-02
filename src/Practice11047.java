@@ -11,14 +11,12 @@ import java.util.StringTokenizer;
  */
 public class Practice11047 {
     public static void main(String[] args) throws IOException{
-
         /*
         *  문제 : 동전 0 (백준 11047번) - Greedy
         *  입력 : 첫째 줄에 N과 K가 주어진다. (1 ≤ N ≤ 10, 1 ≤ K ≤ 100,000,000)
                  둘째 줄부터 N개의 줄에 동전의 가치 Ai가 오름차순으로 주어진다.
         *  출력 : 첫째 줄에 K원을 만드는데 필요한 동전 개수의 최소값을 출력한다.
         * */
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int N = Integer.parseInt(st.nextToken());
