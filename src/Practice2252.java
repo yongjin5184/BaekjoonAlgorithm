@@ -17,7 +17,7 @@ public class Practice2252 {
          *            2. Arraylist<Integer>[] list를 선언한다.
          *            3. 자신을 가르키는 화살표의 갯수를 표현하는 indegree 배열을 선언한다.(진입차수 배열)
          *            4. Queue를 선언하여, 진입차수가 0인 경우 Queue에 넣어준다.
-         *            5. Queue에서 값을 빼면서 list를 통해 다음 가르키는 값으로 이동하고 가르키는 화살표를 없애준다.
+         *            5. Queue에서 값을 빼면서 list를 통해 다음 가리키는 값으로 이동하고 가리키는 화살표를 없애준다.
          *            6. 화살표를 없애면 indegree의 값에서 -1을 하고 indegree가 0이라면 Queue에 넣어 계속 진행되도록 한다.
          *
          */
@@ -28,9 +28,9 @@ public class Practice2252 {
         int M = arr[1];
 
         indegree = new int[N + 1];
-        list = new ArrayList[ N + 1];
+        list = new ArrayList[N + 1];
         for(int i = 1; i <= N; i++){
-            list[i] = new ArrayList<Integer>();
+            list[i] = new ArrayList<>();
         }
 
         for(int i = 0; i < M; i++){
