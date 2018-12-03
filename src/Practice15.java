@@ -5,7 +5,6 @@ import java.util.Scanner;
  */
 public class Practice15 {
     public static void main(String[] args){
-
         /*
         *  문제 : 세로읽기 (백준 10798번)
         *  입력 : 총 다섯줄의 입력이 주어진다. 각 줄에는 최소 1개, 최대 15개의 글자들이 빈칸 없이 연속으로 주어진다.
@@ -13,8 +12,6 @@ public class Practice15 {
         *       각 줄의 시작과 마지막에 빈칸은 없다.
         *  출력 : 영석이가 세로로 읽은 순서대로 글자들을 출력한다. 이때, 글자들을 공백 없이 연속해서 출력한다.
         * */
-
-
         Scanner scan = new Scanner(System.in);
         int lineMaxLen = 0;
         String[][] tmp = new String[5][15];
