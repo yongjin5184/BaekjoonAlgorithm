@@ -23,7 +23,6 @@ public class Practice5585 {
                 index++;
             }
         }
-
         System.out.println(index);
     }
 }
