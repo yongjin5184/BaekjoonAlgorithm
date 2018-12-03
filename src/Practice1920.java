@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Practice1920 {
     public static void main(String[] args) throws IOException{
         /**
-         * description : 백준 1920 수찾기
+         * description : 백준 1920 수찾기 (이진탐색)
          * solution : 1. 이진탐색을 구현하는 문제.
          *            2. 찾을 숫자, 대상 배열, 시작 값, 마지막 값을 Parameter 로 받는 Method를 선언
          *            3. 탈출 조건 : 시작 값과 마지막 값이 역전 되는 순간 값을 못 찾고 return
