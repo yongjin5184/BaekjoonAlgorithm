@@ -18,7 +18,6 @@ public class Practice2548 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
         String[] strs = br.readLine().trim().split(" ");
-//        Arrays.sort(strs, (num1, num2) -> Integer.parseInt(num1) - Integer.parseInt(num2));
         Arrays.sort(strs);
         int[] arr = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();
 
