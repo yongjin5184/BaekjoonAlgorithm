@@ -32,16 +32,16 @@ public class Practice1260 {
             map[x][y] = map[y][x] = 1;
         }
 
-        dfs(V, N);
+        dfs(N, V);
 
-        System.out.println("");
+        System.out.println();
         visit = new boolean[N + 1];
 
-        bfs(V, N);
+        bfs(N, V);
     }
 
-    public static void dfs(int V, int N){
-        if(visit[V] == true){
+    public static void dfs(int N, int V){
+        if(visit[V]){
             return;
         }
 
@@ -50,12 +50,12 @@ public class Practice1260 {
         for(int i = 1; i < N + 1; i++){
             if(map[V][i] == 1){
                 visit[V] = true;
-                dfs(i, N);
+                dfs(N, i);
             }
         }
     }
 
-    public static void bfs(int V, int N){
+    public static void bfs(int N, int V){
         Queue<Integer> queue = new LinkedList<>();
 
         queue.offer(V);
