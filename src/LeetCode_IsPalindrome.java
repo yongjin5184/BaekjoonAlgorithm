@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class LeetCode_isPalindrome {
+public class LeetCode_IsPalindrome {
     public static void main(String[] args) throws IOException {
         /**
          * description  : LeetCode isPalindrome
