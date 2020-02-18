@@ -1,9 +1,8 @@
-import java.io.IOException;
 
 public class LeetCode_MergeTwoSortedLists {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         /**
-         * description  : LeetCode MergeTowSortedLists
+         * description  : LeetCode MergeTwoSortedLists
          *                두 개의 정렬된 리스트를 더하는 문제 (listNode Class)
          * solution     : 1. head 를 선언한다.
          *                2. 두 개의 리스트 중 하나가 null 일 때까지 result 에 해당 list 를 연결해 준다.
