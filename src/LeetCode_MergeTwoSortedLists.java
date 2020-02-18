@@ -1,19 +1,16 @@
-import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class LeetCode_MergeTwoSortedLists {
     public static void main(String[] args) throws IOException {
         /**
-         * description  : LeetCode ValidParentheses
-         *                짝이 맞는 brace 를 찾는 문제
-         * solution     : 1. 스택을 사용하여 (, {, [ 이 나오면 Push
-         *                2. 맞는 짝이 나오면 pop 를 시킨다.
-         *                3. 맞는 짝이 나오지 않으면 false 를 반환
-         * result       : O(n^2)
+         * description  : LeetCode MergeTowSortedLists
+         *                두 개의 정렬된 리스트를 더하는 문제 (listNode Class)
+         * solution     : 1. head 를 선언한다.
+         *                2. 두 개의 리스트 중 하나가 null 일 때까지 result 에 해당 list 를 연결해 준다.
+         *                3. 하나의 list 가 null 이면 나머지 list 를 result 에 전부 연결한다.
+         *                4. head 의 next 를 출력한다.
+         * result       : O(n)
          */
-        BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("test.txt")));
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
         ListNode listNode3 = new ListNode(4);
@@ -32,30 +29,25 @@ public class LeetCode_MergeTwoSortedLists {
 
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode l3 = new ListNode(0);
-        ListNode head = l3;
-
-        while(l1 != null && l2 != null){
+        ListNode result = new ListNode(0);
+        ListNode head = result;
+        while(l1 != null && l2 != null) {
             if(l1.val <= l2.val){
-                l3.next = l1;
+                result.next = l1;
+                result = result.next;
                 l1 = l1.next;
-            }else{
-                l3.next = l2;
+            } else {
+                result.next = l2;
+                result = result.next;
                 l2 = l2.next;
             }
-            l3 = l3.next;
         }
 
-        if(l1 != null){
-            l3.next = l1;
-            l1 = l1.next;
-            l3 = l3.next;
+        if (l1 != null) {
+            result.next = l1;
         }
-
-        if(l2 != null){
-            l3.next = l2;
-            l2 = l2.next;
-            l3 = l3.next;
+        if (l2 != null) {
+            result.next = l2;
         }
 
         return head.next;
