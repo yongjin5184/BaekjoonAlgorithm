@@ -18,3 +18,4 @@ public class LeetCode_ImplementStrStr {
         return haystack.indexOf(needle);
     }
 }
+
