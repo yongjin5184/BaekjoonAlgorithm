@@ -22,12 +22,10 @@ public class LeetCode_MergeTwoSortedLists {
         listNode1_1.next = listNode1_2;
         listNode1_2.next = listNode1_3;
 
-        System.out.println(mergeTwoLists(listNode1, listNode1_1));
+        printListNode(mergeTwoLists(listNode1, listNode1_1));
     }
 
-
-
-    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    private static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(0);
         ListNode head = result;
         while(l1 != null && l2 != null) {
@@ -50,6 +48,19 @@ public class LeetCode_MergeTwoSortedLists {
         }
 
         return head.next;
+    }
+
+    private static void printListNode(ListNode head1) {
+        StringBuilder st = new StringBuilder();
+        while(head1 != null) {
+            st.append(head1.val);
+            head1 = head1.next;
+            if(head1 != null) {
+                st.append("->");
+            }
+        }
+
+        System.out.println(st.toString());
     }
 }
 
