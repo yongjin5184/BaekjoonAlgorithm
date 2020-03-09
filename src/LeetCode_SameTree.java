@@ -41,11 +41,11 @@ public class LeetCode_SameTree {
         else
             return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
+}
 
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int x) { val = x; }
 }
