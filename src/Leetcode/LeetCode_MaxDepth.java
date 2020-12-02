@@ -1,3 +1,5 @@
+package src.src.Leetcode;
+
 public class LeetCode_MaxDepth {
 
     public static void main(String[] args) {
