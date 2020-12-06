@@ -1,6 +1,6 @@
 package src.src.programmers;
 
-public class ReversTernaryNotation {
+public class ReverseTernaryNotation {
 
     public static int solution(int n) {
         StringBuilder stringBuilder = new StringBuilder();
