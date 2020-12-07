@@ -43,7 +43,10 @@ public class CombinationSum2 {
     }
 
     public static void main(String[] args) {
-        int[] candidates = {10, 1, 2, 7, 6, 1, 5};
-        System.out.println(combinationSum2(candidates, 8));
+        int[] candidates1 = {10, 1, 2, 7, 6, 1, 5};
+        int target1 = 8;
+        int[] candidates2 = {1, 3, 2, 1};
+        int target2 = 3;
+        System.out.println(combinationSum2(candidates2, target2));
     }
 }
