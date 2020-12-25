@@ -6,8 +6,9 @@ public class BinarySearch {
     }
 
     private static int binarySearch(int[] A, int start, int end, int target) {
-        if (start > end)
+        if (start > end) {
             return -1;
+        }
 
         int mid = (start + end) / 2;
         if (target == A[mid]) {
