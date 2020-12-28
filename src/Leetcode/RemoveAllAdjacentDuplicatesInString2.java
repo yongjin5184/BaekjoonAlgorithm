@@ -4,9 +4,7 @@ import java.util.Stack;
 
 public class RemoveAllAdjacentDuplicatesInString2 {
     /**
-     *
-     * @description
-     * 1. 문자와 문자의 카운트를 세는 2개의 스택을 선언한다.
+     * @description 1. 문자와 문자의 카운트를 세는 2개의 스택을 선언한다.
      * 2. 스택이 비어있을 때는 문자 스택에 문자, 문자 카운트 스택에 1를 Push 한다.
      * 3. 스택의 맨 위의 문자가 k 번째로 들어올 때, 문자 스택에서 k - 1 만큼 Pop 한다.
      * 4. 스택의 맨 위의 문자가 k 번째가 아닌 경우는 같은 문자인 경우, pop() + 1, 같은 문자가 아닌 경우 1 을 add 한다.
