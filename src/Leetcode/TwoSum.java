@@ -1,9 +1,9 @@
-package src.src.Leetcode;
+package Leetcode;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class LeetCode_TwoSum {
+public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         /**
          * description  : LeetCode TwoSum
@@ -14,7 +14,7 @@ public class LeetCode_TwoSum {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int keyOfMap = target - nums[i];
-            if (map.containsKey(keyOfMap)){
+            if (map.containsKey(keyOfMap)) {
                 return new int[]{map.get(keyOfMap), i};
             }
 
