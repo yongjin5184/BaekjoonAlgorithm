@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FirstUniqueCharacterInAString {
-    public static int firstUniqChar(String s) {
 
+    public static int firstUniqChar(String s) {
         char[] chars = s.toCharArray();
         Map<Character, Integer> characterCountMap = new HashMap<>();
         for (char aChar : chars) {
