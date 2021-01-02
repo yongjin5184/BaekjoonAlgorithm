@@ -5,6 +5,26 @@ import java.util.Map;
 
 public class ValidateAnagram {
 
+    public static boolean isImproveAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        char[] charCounts = new char[26];
+        for (int i = 0; i < s.length(); i++) {
+            charCounts[s.charAt(i) - 'a']++;
+            charCounts[t.charAt(i) - 'a']--;
+        }
+
+        for (char charCount : charCounts) {
+            if (charCount != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
             return false;
@@ -34,7 +54,7 @@ public class ValidateAnagram {
     }
 
     public static void main(String[] args) {
-        System.out.println(isAnagram("anagram", "nagaram"));
-        System.out.println(isAnagram("rat", "car"));
+        System.out.println(isImproveAnagram("anagram", "nagaram"));
+        System.out.println(isImproveAnagram("rat", "car"));
     }
 }
