@@ -5,6 +5,7 @@ public class Stair {
     /**
      * 계단 오르기
      * 손으로 해보면 피보나치 수열이라는 것을 알 수 있음
+     * {1, 1, 2, 3, 5, 8 ...}
      */
     public static int fib2(int n) {
         if (n <= 1) {
