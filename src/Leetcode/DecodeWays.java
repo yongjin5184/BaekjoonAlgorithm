@@ -2,7 +2,7 @@ package Leetcode;
 
 public class DecodeWays {
     /**
-     * @description 문자로된 숫자가 아래와 같이 decoding 이 되어 나타낼 수 있는 문자의 갯수를 구하는 문제
+     * @description 문자로된 숫자가 아래와 같이 decoding 이 되어 나타낼 수 있는 문자의 갯수를 구하는 문제 (DP)
      * 'A' -> "1"
      * 'B' -> "2"
      * ...
