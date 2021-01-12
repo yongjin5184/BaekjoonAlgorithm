@@ -55,9 +55,9 @@ public class MaximumSubarray {
     public static int maxSubArray(int[] nums) {
         int maxSubarray = nums[0];
         int max = nums[0];
-        for(int i = 1; i < nums.length; i++) {
+        for (int i = 1; i < nums.length; i++) {
             maxSubarray = Math.max(maxSubarray + nums[i], nums[i]);
-            if(maxSubarray > max){
+            if (maxSubarray > max) {
                 max = maxSubarray;
             }
         }
