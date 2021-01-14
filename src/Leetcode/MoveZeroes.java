@@ -20,7 +20,6 @@ public class MoveZeroes {
                 zeroPointer++;
             }
         }
-
     }
 
     private static void swap(int[] nums, int pointer, int zeroPointer) {
