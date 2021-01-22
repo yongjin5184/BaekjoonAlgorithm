@@ -1,4 +1,4 @@
-package src.src.Leetcode;
+package Leetcode;
 
 /**
  * description: Leetcode 121. Best Time to Buy and Sell Stock
