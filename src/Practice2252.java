@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
+import java.util.Queue;
 
 /**
  * Created by yong on 2018. 11. 30..
@@ -47,7 +48,7 @@ public class Practice2252 {
     }
 
     public static void  topologySort(){
-        Queue<Integer> queue = new LinkedList<>();
+        Queue<Integer> queue = new LinkedList();
         for(int i = 1; i < indegree.length; i++){
             if(indegree[i] == 0){
                 queue.add(i);

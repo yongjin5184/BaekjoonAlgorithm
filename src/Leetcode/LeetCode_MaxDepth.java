@@ -1,4 +1,4 @@
-package src.src.Leetcode;
+package Leetcode;
 
 public class LeetCode_MaxDepth {
 
