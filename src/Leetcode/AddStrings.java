@@ -1,4 +1,4 @@
-package src.src.Leetcode;
+package Leetcode;
 
 public class AddStrings {
     public static String addString(String a, String b) {
