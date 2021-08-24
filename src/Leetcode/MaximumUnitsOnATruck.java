@@ -20,13 +20,13 @@ public class MaximumUnitsOnATruck {
         Arrays.sort(boxTypes, (o1, o2) -> o2[1] - o1[1]);
         int units = 0;
         for (int[] box : boxTypes) {
-            if (truckSize >= box[0]) {
-                units += box[0] * box[1];
-                truckSize -= box[0];
-            } else {
+            if (truckSize < box[0]) {
                 units += truckSize * box[1];
                 return units;
             }
+
+            units += box[0] * box[1];
+            truckSize -= box[0];
         }
         return units;
     }
