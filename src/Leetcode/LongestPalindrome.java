@@ -1,43 +1,24 @@
 package Leetcode;
 
 public class LongestPalindrome {
-
-  public static String longestPalindrome(String s) {
-    if (s == null || s.length() < 1) {
-      return "";
+    public static void main(String[] args) {
+        System.out.println(longestPalindrome("abccccdd"));
+        System.out.println(longestPalindrome("a"));
     }
 
-    int end = 0;
-    int start = 0;
-    for (int i = 0; i < s.length(); i++) {
-      int len1 = expandFromMiddle(s, i, i);
-      int len2 = expandFromMiddle(s, i, i + 1);
-      int len = Math.max(len1, len2);
-      if (len > end - start) {
-        start = i - ((len - 1) / 2);
-        end = i + (len / 2);
-      }
+    public static int longestPalindrome(String s) {
+        final int len = s.length();
+
+        final int size = 128;
+        final int[] counts = new int[size];
+        for (int i = 0; i < s.length(); i++) {
+            counts[s.charAt(i)]++;
+        }
+
+        int result = 0;
+        for (int i = 0; i < size; i++) {
+            result += (counts[i] / 2 * 2);
+        }
+        return result == len? result: result + 1;
     }
-
-    return s.substring(start, end + 1);
-  }
-
-  public static int expandFromMiddle(String s, int left, int right) {
-    if (s == null || left > right) {
-      return 0;
-    }
-
-    while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-      left--;
-      right++;
-    }
-
-    return right - left - 1;
-  }
-
-  public static void main(String[] args) {
-//    System.out.println(longestPalindrome("racecar"));
-    System.out.println(longestPalindrome("abba"));
-  }
-
 }
