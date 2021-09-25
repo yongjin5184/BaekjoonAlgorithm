@@ -20,7 +20,6 @@ public class LongestPalindromeSubstring {
 
         int longestCount = 0;
         String longestSubstring = "";
-
         for (int i = 0; i < length; i++) {
             for (int j = i; j < length; j++) {
                 if (isPalindrome(s, i, j)) {
