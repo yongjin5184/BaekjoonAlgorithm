@@ -3,7 +3,7 @@ package Leetcode;
 public class HouseRobber {
     /**
      * @description 배열에 중복되지 않은 값을 합하여 최대값을 리턴하는 문제
-     * 전형적인 DP 문제
+     * 전형적인 DP 문
      */
     public static void main(String[] args) {
         int rob1 = rob(new int[]{1, 2, 3, 1});
