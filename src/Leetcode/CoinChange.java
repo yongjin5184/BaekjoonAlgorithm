@@ -16,7 +16,7 @@ public class CoinChange {
         dp[0] = 0;
         for (int i = 0; i <= amount; i++) {
             for (int coin : coins) {
-                if (i - coin >= 0) {
+                if (coin <= i) {
                     dp[i] = Math.min(dp[i], dp[i - coin] + 1);
                 }
             }
