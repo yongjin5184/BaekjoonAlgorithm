@@ -64,9 +64,3 @@ public class LeetCode_MergeTwoSortedLists {
         System.out.println(st.toString());
     }
 }
-
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
-}
