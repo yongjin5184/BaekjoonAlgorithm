@@ -39,6 +39,15 @@ public class GreatestCommonDivisorOfStrings {
             throw new AssertionError(name + " 실패: 기대값=\"" + expected
                     + "\", 실제값=\"" + result + "\"");
         }
+
+        String result2 = gcdOfStrings2(str1, str2);
+        System.out.println("최적화 풀이 실제값: \"" + result2 + "\"");
+        if (expected.equals(result2)) {
+            System.out.println("최적화 풀이 판정: PASS");
+        } else {
+            throw new AssertionError(name + " 최적화 풀이 실패: 기대값=\"" + expected
+                    + "\", 실제값=\"" + result2 + "\"");
+        }
     }
 
     /**
@@ -68,6 +77,36 @@ public class GreatestCommonDivisorOfStrings {
 
         // 4단계: 모든 후보가 실패하면 공통 반복 단위가 없습니다.
         return "";
+    }
+
+    /**
+     * 최적화 풀이: 공통 반복 단위의 존재를 확인한 뒤 길이의 최대공약수를 구합니다.
+     * 문제 조건에 따라 두 입력은 비어 있지 않은 문자열입니다.
+     * 시간 복잡도: O(n + m).
+     * 추가 공간 복잡도: O(n + m) — 이어 붙인 문자열을 보관합니다.
+     */
+    public static String gcdOfStrings2(String str1, String str2) {
+        // 같은 단위의 반복으로 이루어진 두 문자열은 붙이는 순서를 바꿔도 같습니다.
+        // 반대로 두 결과가 같다면 공통 반복 단위가 존재합니다.
+        if (!(str1 + str2).equals(str2 + str1)) {
+            return "";
+        }
+
+        // 공통 반복 단위가 존재하면, 가장 긴 단위의 길이는 두 길이의 최대공약수입니다.
+        // 예: "ABABAB"와 "ABAB" → gcd(6, 4) = 2 → 앞의 두 글자 "AB".
+        int length = gcd(str1.length(), str2.length());
+        return str1.substring(0, length);
+    }
+
+    private static int gcd(int a, int b) {
+        // 유클리드 호제법: gcd(a, b) = gcd(b, a % b).
+        // 첫 번째 길이가 더 작아도 같은 방식으로 계산할 수 있습니다.
+        while (b != 0) {
+            int remainder = a % b;
+            a = b;
+            b = remainder;
+        }
+        return a;
     }
 
     private static boolean canMake(String target, String candidate) {
